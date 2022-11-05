@@ -124,7 +124,7 @@
 <div class="topnav">
     <a class="active" href="Index.html">Home</a>
     <a href="About1.html">About</a>
-    <a href="Product1.html">Products</a>
+    <a href="Product1.php">Products</a>
     <a href="News1.html">News</a>
     <a href="Contact1.php">Contact</a>
     <a href="login11.php">Login</a>
