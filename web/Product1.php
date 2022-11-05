@@ -156,6 +156,21 @@
                             }
                         }
                         echo "</div>";
+                        // top 5 most visited products
+                        asort($visit_count);
+                        $visit_count = array_reverse($visit_count);
+                        $top5 = array_slice($visit_count, 0, 5);
+                        echo "<div class='text-center px-16'>";
+                        echo"<p class='text-white text-xl'>Top 5 Most Visited Products:-</p>";
+                        foreach ($top5 as $service_url => $count) {
+                            echo "
+                            <table>
+                                <tr>
+                                    <td><a href='$service_url.php' style='color:red'>$service_url-$count times</a></td>
+                                </tr>
+                            </table>";
+                        }
+                        echo "</div>";
                         ?>
 </div>
 <div class="grid grid-cols-3 px-32 py-16 gap-12">
