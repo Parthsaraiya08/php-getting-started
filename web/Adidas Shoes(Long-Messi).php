@@ -113,7 +113,20 @@
     
     $visited_services->enqueue("Adidas Shoes(Long-Messi).php");
     $visited_services = serialize($visited_services);
-    setcookie('visited_services', $visited_services, time() + (86400 * 30), "/");
+
+    if (isset($_COOKIE['visit_count'])) {
+        $visit_count = $_COOKIE['visit_count'];
+        $visit_count = unserialize($visit_count);
+        if (array_key_exists("Adidas Shoes(Long-Messi)", $visit_count)) {
+            $visit_count["Adidas Shoes(Long-Messi)"] += 1;
+        } else {
+            $visit_count["Adidas Shoes(Long-Messi)"] = 1;
+        }
+    } else {
+        $visit_count = array();
+        $visit_count["Adidas Shoes(Long-Messi)"] = 1;
+    }
+    setcookie('visit_count', serialize($visit_count), time() + (86400 * 30), "/");
 ?> 
 <div class="grid grid-cols-3 px-32 py-16">
 <div class="col-span-1 flex flex-col text-center text-white items-center">

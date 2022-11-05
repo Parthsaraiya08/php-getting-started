@@ -59,7 +59,6 @@
     .h2 {
         color: white;
         text-align: left;
-        padding-top: 5%;
         font-size: large;
     }
     .h3 {
@@ -95,6 +94,15 @@
     .a{
         font color: white;
     }
+    .h3{
+        font color: white;
+        font: size 20px;
+        text-align: right;
+    }
+    .h4{
+        font: size 20px;
+        text-align: right;
+    }
 </style>
 <body>
 
@@ -107,9 +115,13 @@
     <a href="login11.php">Login</a>
 </div>
 <!-- Text in white color -->
-<h3 class="h3">Last five previously visited products:-</h3>
+<div style='display: flex; width: 100vw;' class='justify-center'>
+<div class='px-16'>
+<p class='text-white text-xl'>Last five previously visited products:-</p>
 
                         <?php
+                        echo "<div style='text-align:center'>";
+
                         // read the cookie visited_services to get a SplQueue of the last 5 visited services and display them
                         if(isset($_COOKIE['visited_services'])) {
                            $visited_services = $_COOKIE['visited_services'];
@@ -127,9 +139,26 @@
                             </table>";
                             }
                         }
+                        echo "</div>";
+                        echo "</div>";
+                        echo "<div class='text-center px-16'>";
+                        echo"<p class='text-white text-xl'>Most Visited Products:-</p>";
+                        if (isset($_COOKIE['visit_count'])) {
+                            $visit_count = $_COOKIE['visit_count'];
+                            $visit_count = unserialize($visit_count);
+                            foreach ($visit_count as $service_url => $count) {
+                                echo "
+                                <table>
+                                    <tr>
+                                        <td><a href='$service_url.php' style='color:red'>$service_url-$count times</a></td>
+                                    </tr>
+                                </table>";
+                            }
+                        }
+                        echo "</div>";
                         ?>
-
-<div class="grid grid-cols-3 px-32 py-16">
+</div>
+<div class="grid grid-cols-3 px-32 py-16 gap-12">
     <div class="col-span-1 flex flex-col text-center text-white items-center">
         <img src="Stud.png" class="w-[400px] h-auto text-center rounded-3xl"/>
         <p class="price text-2xl">$79.99</p>
