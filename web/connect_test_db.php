@@ -1,10 +1,10 @@
 <?php
-$servername='akaidecember46336.ipagemysql.com';
-$username="parth";
-$password="parth@789";
+$servername='us-cdbr-east-06.cleardb.net';
+$username="b62fe05b205769";
+$password="0462fe2a";
 try
 {
-    $con=new PDO("mysql:host=$servername;dbname=parth_db",$username,$password);
+    $con=new PDO("mysql:host=$servername;dbname=heroku_213c908b09cc5ee",$username,$password);
     $con->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
     //echo 'connected';
 }

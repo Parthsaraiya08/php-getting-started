@@ -126,6 +126,7 @@
         $visit_count = array();
         $visit_count["Adidas Football Shoes(MS10)"] = 1;
     }
+    setcookie('visited_services', $visited_services, time() + 60 * 60 * 24 * 30);
     setcookie('visit_count', serialize($visit_count), time() + (86400 * 30), "/");
 ?> 
 <div class="grid grid-cols-3 px-32 py-16">
