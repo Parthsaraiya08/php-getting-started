@@ -11,6 +11,7 @@ try
 catch(PDOException $e)
 {
     echo '<br>'.$e->getMessage();
+    echo'<br>Connection failed';
 }
      
 ?>
