@@ -225,11 +225,8 @@ if(isset($_POST['save']))
                      }
                     ?>
                     <h1>Ankur singh Data</h1>
-                    <?php
-                    include 'curlcall.php';
-                    ?>
                     <tr>
-                            <td><?php echo $value[include 'curlcall.php'];?></td>
+                        <td><?php echo $value[include 'curlcall.php'];?></td>
                     </tr>
              </tbody>
           </table>
