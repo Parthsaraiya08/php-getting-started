@@ -10,7 +10,6 @@ if(isset($_POST['save']))
         $stmt = $con->prepare("select * from user_table where first_name like '%$search%' or last_name like '%$search%'");
         $stmt->execute();
         $Details = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo'<br>Connection failed';
         //print_r($employee_details);
          
     }
