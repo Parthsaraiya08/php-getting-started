@@ -1,5 +1,5 @@
 <?php
-    $link = mysqli_connect('us-cdbr-east-06.cleardb.net', 'b62fe05b205769', '99Eq6f2ocq3kk_*', 'heroku_213c908b09cc5ee');
+    $link = mysqli_connect('us-cdbr-east-06.cleardb.net', 'b62fe05b205769', '0462fe2a', 'heroku_213c908b09cc5ee');
     if (!$link) {
         echo "Not connected!!!";
         die('Could not connect: ' . mysqli_connect_error());
