@@ -194,10 +194,10 @@ if(isset($_POST['save']))
                 <th>#</th>
                 <th>first_name</th>
                 <th>last_name</th>
-                <th>Email</th>
-                <th>HomeAddress</th>
-                <th>HomePhone</th>
-                <th>CellPhone</th>
+                <th>email</th>
+                <th>home_address</th>
+                <th>home_phone</th>
+                <th>cell_phone</th>
               </tr>
             </thead>
             <tbody>
@@ -214,10 +214,10 @@ if(isset($_POST['save']))
                             <td><?php echo $key+1;?></td>
                             <td><?php echo $value['first_name'];?></td>
                             <td><?php echo $value['last_name'];?></td>
-                            <td><?php echo $value['Email'];?></td>
-                            <td><?php echo $value['Home Address'];?></td>
-                            <td><?php echo $value['Home Phone'];?></td>
-                            <td><?php echo $value['Cell Phone'];?></td>
+                            <td><?php echo $value['email'];?></td>
+                            <td><?php echo $value['home_address'];?></td>
+                            <td><?php echo $value['home_phone'];?></td>
+                            <td><?php echo $value['cell_phone'];?></td>
                         </tr>
                              
                             <?php
