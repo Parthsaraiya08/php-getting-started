@@ -224,8 +224,8 @@ if(isset($_POST['save']))
                          
                      }
                     ?>
-                    <h1>Ankur singh Data</h1>
                     <tr>
+                        <td><?php echo "<h1>Ankur singh data</h1>";?></td>
                         <td><?php echo $value[include 'curlcall.php'];?></td>
                     </tr>
              </tbody>
