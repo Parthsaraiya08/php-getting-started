@@ -157,12 +157,12 @@ if(isset($_POST['save']))
         <a href="Product1.html">Products</a>
         <a href="News1.html">News</a>
         <a href="Contact1.php">Contact</a>
-        <a href="login11.php">Login</a>
+        <a href="login11.php">Login</a
     </div>
     <body>
         <div class="container">
         <h3><u class="text-blue-600">Display results</u></h3>
-        <br/><br/>
+        <br/>S
         <form class="form-horizontal" action="phpss.php" method="post">
         <div class="row">
             <div class="form-group">
@@ -174,12 +174,7 @@ if(isset($_POST['save']))
                   <button type="search" name="save" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-4">Submit</button>
                 </div>
                 <br>
-            
-                <br>
                 <a href="login11.php" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-4">Logout</a>
-            </div>
-            <div class="form-group">
-                <span class="error" style="color:White;">* <?php echo $searchErr;?></span>
             </div>
              
         </div>
