@@ -225,47 +225,9 @@ if(isset($_POST['save']))
                      }
                     ?>
                     <?php
-                    echo $value'<h1>User of Ankur Singh</h1>';>
+                    echo $value'<h1>User of Ankur Singh</h1>';
                     include 'curlcall.php';
                     ?>
-                    <div class="table-responsive">          
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>first_name</th>
-                                    <th>last_name</th>
-                                    <th>email</th>
-                                    <th>home_address</th>
-                                    <th>home_phone</th>
-                                    <th>cell_phone</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                        <?php
-                                        if(!$Details)
-                                        {
-                                            echo '<tr>No data found</tr>';
-                                        }
-                                        else{
-                                            foreach($Details as $key=>$value)
-                                            {
-                                                ?>
-                                            <tr>
-                                                <td><?php echo $key+1;?></td>
-                                                <td><?php echo $value['first_name'];?></td>
-                                                <td><?php echo $value['last_name'];?></td>
-                                                <td><?php echo $value['email'];?></td>
-                                                <td><?php echo $value['home_address'];?></td>
-                                                <td><?php echo $value['home_phone'];?></td>
-                                                <td><?php echo $value['cell_phone'];?></td>
-                                            </tr>
-                                                
-                                                <?php
-                                            }
-                                            
-                                        }
-                                        ?>
              </tbody>
           </table>
         </div>
