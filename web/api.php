@@ -6,10 +6,13 @@
     }
     $sql = "SELECT * FROM user_table";
     $result = $link->query($sql);
-    $row = $result->fetch_assoc();
-    $users = $row["first_name"];
+    // $row = $result->fetch_assoc();
+    // $users = $row["first_name"];
+    //new array
+    $users2 = array();
     while($row = $result->fetch_assoc()){
-        $users = $users.",".$row["first_name"];
+        $users2[] = $row["first_name"];
+        // $users = $users.",".$row["first_name"];
     }
-    echo $users;
+    echo json_encode($users2);
 ?>
